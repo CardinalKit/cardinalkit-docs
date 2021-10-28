@@ -10,7 +10,6 @@ order: 2
 <!-- ![image](./images/doctors.svg) -->
 
 Prior to CardinalKit, researchers would need to implement a backend solution of their choosing so data that their subjects were gathering could be securely stored. CardinalKit leverages existing database architecture on the Google Cloud platform to make it as frictionless as possible to get started with collecting information on your users.
-## Create a new Firebase Database
 
 <img src="./images/connect.svg" alt="drawing" width="250"/>
 

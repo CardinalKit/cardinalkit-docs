@@ -1,17 +1,18 @@
 ---
 home: false
-title: web administration
-footer: Alternova Inc
+title: Administrative Access
+footer: Stanford Byers Center for Biodesign
 ---
-<Block>
 
-## 1) Create admin account
+# Admistrative Access
+
+## 1. Create admin account
 
  <br />
 
- To manage your website you need to create an administrator account this is created from the firebase administrator
+ To manage your dashboard you need to create an Administrator account. This is created from the Firebase console.
 
- From the firebase administrator enter authentication
+ From the [Firebase console](https://console.firebase.google.com), enter the **Authentication** section.
 
  <br />
 
@@ -20,7 +21,7 @@ footer: Alternova Inc
  <br />
  <br />
 
- and then add new user
+ And then add a new user.
  
  <br />
 
@@ -29,7 +30,7 @@ footer: Alternova Inc
  <br />
  <br />
 
-enter a username and password for the administrator user
+Enter a username and password for the Administrator user.
 
 <br />
 
@@ -41,7 +42,7 @@ enter a username and password for the administrator user
 Now you need to indicate to the web page that this new user is an administrator user, the user roles are managed from the database in firestore
 For users created from the web, this process will be automatic, it is necessary to do it by hand only once for the administrator user.
 
-First copy the uid of the user you just created
+First copy the uid of the user you just created:
 
 <br />
 
@@ -50,7 +51,7 @@ First copy the uid of the user you just created
 <br />
 <br />
 
-then click on firestore database
+Then click on firestore database:
 
 <br />
 
@@ -59,13 +60,11 @@ then click on firestore database
 <br />
 <br />
 
-Esta es la base de datos de todo el proyecto aca podras ver todos los registros de estudios y usuarios generados en la aplicacion.
+This is the database of the entire project, here you can see all the records of studies and users generated in the application.
 
-Crea una nueva coleccion llamada user_roles,
-agrega un docuemento con el uid del usuario previamente creado
+Create a new collection called user_roles, add a document with the uid of the previously created user
 
-
-Finalmente agrega un campo al documento rol:"superAdmin"
+Finally add a field to the role document: "superAdmin".
 
 <br />
 
@@ -74,6 +73,6 @@ Finalmente agrega un campo al documento rol:"superAdmin"
 <br />
 <br />
 
-Now you can log in with your administrator account
+Now you can log in with your administrator account!
 
 </Block>

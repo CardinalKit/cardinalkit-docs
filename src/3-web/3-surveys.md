@@ -6,7 +6,7 @@ footer: Stanford Byers Center for Biodesign
 
 CardinalKit allows you to create custom surveys that users can complete as many times as they want on the main screen, or schedule them to be filled on specific days or in a certain period, surveys can be assigned to a specific user or a study.
 
-## 1) Create a survey
+## 1. Create a survey
 
 On the website after logging in as an administrator, in the sidebar locate the surveys section.
 
@@ -47,7 +47,7 @@ You can add all the questions you need by clicking on the Add Form question butt
 To add questions to a form, click on add form question.
 
 
-## 2) Survey Types
+## 2. Survey Types
 
 <br />
 
@@ -100,7 +100,7 @@ show the user a final message
 
 <img src="./images/Surveys/7-example2.png" alt="drawing" width="350"/>
 
-## 3) How to assign a survey for a study?
+## 3. How to assign a survey for a study?
 
 The surveys previously created in addition to being able to be filled from the main screen can be added to the calendar and to be filled in specific days or with periodically
 
@@ -157,9 +157,11 @@ You will see the calendar and the table of assigned surveys press add survey to 
 
 <img src="./images/Surveys/14-form.png" alt="drawing" width="650"/>
 
- ## 5) Download Answers
+ ## 5. Download Answers
 
-cardinal kit offers the possibility to download all the responses of all users to a specific survey in a single csv file
+CardinalKit features the ability to download all the responses of all users to a specific survey in a single .csv file.
+<br />
+<br />
 go to the surveys tab and select the details button for a specific survey
 
 <img src="./images/Surveys/15-edit.png" alt="drawing" width="650"/>

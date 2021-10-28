@@ -21,7 +21,7 @@ In the CKConfiguration.plist file, set "Login-Passwordless" to 0 and "Login-Sign
 
 Dynamic links, the process which enables your users to access your application and authenticate themselves simply by clicking on a link sent to them via email, is a common choice for research apps.
 
-## 1. Add Relevent IDs to Firebase
+## 1. Add Relevant IDs to Firebase
 
 The first step is to add your Apple Team ID and a random App Store ID to Firebase settings. This informations is required to use dynamic links.
 

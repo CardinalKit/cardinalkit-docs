@@ -1,6 +1,6 @@
 ---
 home: false
-title: Dashboard Deploy
+title: Deploy the Dashboard
 footer: Stanford Byers Center for Biodesign
 ---
 
@@ -70,7 +70,7 @@ To automatically transform the data from Open mHealth format to FHIR format it i
  firebase login
   ```
 
-###  Init Firebase Functions on "Firebase" folder
+###  Init Firebase Functions on "firebase" folder
 
 > Don't override any functions folder
 
@@ -79,7 +79,7 @@ firebase init
 ```
 <br />
 
-###  Then Deploy firebase functions
+###  Then Deploy Firebase functions
 
 ```bash
 firebase Deploy --only functions
@@ -87,7 +87,7 @@ firebase Deploy --only functions
 
 ## 3. Run Vue Project
 
-Once we have configured firebase complements, the next step is to run the service of your website locally.
+Once we have configured firebase complements, the next step is to run the service of your website locally. You can also deploy it to the cloud using [Firebase Hosting](https://firebase.google.com/docs/hosting). 
 
 ```bash
  cd cardinal-kit-web
