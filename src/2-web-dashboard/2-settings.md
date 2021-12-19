@@ -55,7 +55,7 @@ Then click on firestore database:
 
 <br />
 
-<img src="./images/Firestore.png" alt="drawing" width="250"/>
+<img src="./images/firestore.png" alt="drawing" width="250"/>
 
 <br />
 <br />

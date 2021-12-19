@@ -2,15 +2,14 @@
 home: false
 title: App Customization Guide
 footer: Alternova Inc
+order: 3
 ---
 
 # App Customization Guide
 
-Note: these features are currently only available on the currently experimental swiftui branch of the CardinalKit repository
-
 CardinalKit provides quick customization options for your health research application through the CKConfiguration.plist file. This file is a spreadsheet that maps CardinalKit-defined keys to user-selected values. This reference shows you how to customize that file to suit your needs. Every key must have a value or the app will crash.
 
-<img src="../images/swiftui.png" alt="drawing" width="650"/>
+<img src="./images/swiftui.png" alt="drawing" width="650"/>
 
 The default CardinalKit sample app with no CKConfiguration.plist changes.
 
