@@ -102,4 +102,4 @@ When the simulator boots up and opens up the app, you may be faced with a white 
 
 <img src="./images/set_target.png" alt="drawing" width="750"/>
 
-If your app is now up and running, continue onto the <a href="/cardinalkit-docs/1-mobile-app/2-setup.html">next section</a> to set up the cloud infrastructure for your app.
+If your app is now up and running, continue onto the <a href="/cardinalkit-docs/1-cardinalkit-app/2-setup.html">next section</a> to set up the cloud infrastructure for your app.

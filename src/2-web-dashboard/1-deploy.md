@@ -2,9 +2,12 @@
 home: false
 title: Deploy the Dashboard
 footer: Stanford Byers Center for Biodesign
+order: 1
 ---
 
 # Deploying the Web Dashboard
+
+CardinalKit offers a web dashboard that can be used to visualize mobile health data and survey responses, as well as create and update surveys.
 
 ## 1. Configure Your Firebase Project
 

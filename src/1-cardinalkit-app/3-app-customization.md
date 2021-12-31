@@ -7,7 +7,7 @@ order: 3
 
 # App Customization Guide
 
-CardinalKit provides quick customization options for your health research application through the CKConfiguration.plist file. This file is a spreadsheet that maps CardinalKit-defined keys to user-selected values. This reference shows you how to customize that file to suit your needs. Every key must have a value or the app will crash.
+CardinalKit provides quick customization options for your health research application through the **CKConfiguration.plist** file, located in the **/CardinalKit-Example/Supporting Files** folder. This file is a spreadsheet that maps CardinalKit-defined keys to user-selected values. This reference shows you how to customize that file to suit your needs. Every key must have a value or the app will crash.
 
 <img src="./images/swiftui.png" alt="drawing" width="650"/>
 

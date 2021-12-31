@@ -2,23 +2,24 @@
 home: false
 title: Survey Creation
 footer: Stanford Byers Center for Biodesign
+order: 3
 ---
 
-CardinalKit allows you to create custom surveys that users can complete as many times as they want on the main screen, or schedule them to be filled on specific days or in a certain period, surveys can be assigned to a specific user or a study.
+# Survey Creation
+
+CardinalKit allows you to create custom surveys that users can complete. They can be listed on the Tasks screen, or you can schedule them to be completed on specific days or within a certain period. Surveys can also be assigned to a specific user or a study.
 
 ## 1. Create a Survey
 
-On the website after logging in as an administrator, in the sidebar locate the surveys section.
+Log into the dashboard as an administrator, then in the sidebar click on *Surveys*.
 
 <img src="./images/surveys/1-sidebar.png" alt="drawing" width="450"/>
 
-Here you will see the list of all the surveys that have been previously created, you can see details, edit and delete.
-
-At the bottom click on Create new Survey.
+Here you will see the list of all the surveys that have been previously created. You can see details, edit, and delete. At the bottom click on *Create new survey*.
 
 <img src="./images/surveys/2-create.png" alt="drawing" width="950"/>
 
-On the main screen of your application, the surveys are separated by sections indicating the title, subtitle and the name of the section where it will be located.
+On the main screen of your application, the surveys are separated by sections indicating the title, subtitle and the name of the section where it will be located. 
 The order number indicates from top to bottom in which position you want it to appear.
 Show on main screen whether or not you want it to appear on the main screen of the application.
 
