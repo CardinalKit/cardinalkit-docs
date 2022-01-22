@@ -20,14 +20,14 @@ Note: you may need to use your personal email instead of your university assigne
 
 Once, your account is created, log into your Firebase console (top right) and add a new project. Name the project to be something related to your app for future reference.
 
-It is important that you disable Google Analytics because it is not BAA compliant and then create your project. It will will take around a minute to set up.
+It is important that you disable Google Analytics because it is not BAA compliant and then create your project. It will take around a minute to set up.
 
 <Example>
 <img src="./images/google-analytics.png" alt="drawing" width="400"/>
 </Example>
 
 <br />
-Once ready, click "continue". Click "Database" under the "Develop" section in the sidebar, and then "Create database".
+Once ready, click "continue". Click "Firestore Database" under the "Build" section in the sidebar, and then "Create database".
 <br />
 <br />
 
@@ -53,7 +53,7 @@ When developing and testing your application, it is fine to use your own custom 
 <br />
 <br />
 
-Finally, set the deploy location to be "us-east1" (or any location close to your study) and click "done".
+Finally, set the deploy location to "us-central" or any location close to your study and click "Enable".
 
 <br />
 
