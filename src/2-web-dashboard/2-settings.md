@@ -31,7 +31,7 @@ order: 2
  <br />
  <br />
 
-Enter a username and password for the Administrator user.
+Enter a username and password for the administrator user.
 
 <br />
 
@@ -40,10 +40,13 @@ Enter a username and password for the Administrator user.
 <br />
 <br />
 
-Now you need to indicate to the web page that this new user is an administrator user, the user roles are managed from the database in firestore
-For users created from the web, this process will be automatic, it is necessary to do it by hand only once for the administrator user.
+## 2. Add admin role
 
-First copy the uid of the user you just created:
+Now you need to indicate to the dashboard that this new user is an **administrator** user. 
+
+User roles are managed in Firestore Database.For users created from the web, this process will be automatic, it is necessary to do it by hand only once for the administrator user.
+
+First copy the **UID** of the user you just created:
 
 <br />
 
@@ -52,20 +55,20 @@ First copy the uid of the user you just created:
 <br />
 <br />
 
-Then click on firestore database:
+Then click on **Firestore Database**:
 
 <br />
 
-<img src="./images/firestore.png" alt="drawing" width="250"/>
+<img src="./images/firestore.png" alt="drawing" />
 
 <br />
 <br />
 
 This is the database of the entire project, here you can see all the records of studies and users generated in the application.
 
-Create a new collection called user_roles, add a document with the uid of the previously created user
+Create a new collection called **user_roles**, add a document with the name being the uid of the previously created administrator user.
 
-Finally add a field to the role document: "superAdmin".
+Finally add a field to the document called **rol** with value **superAdmin**.
 
 <br />
 
@@ -75,5 +78,3 @@ Finally add a field to the role document: "superAdmin".
 <br />
 
 Now you can log in with your administrator account!
-
-</Block>

@@ -4,8 +4,9 @@ This repository contains the documentation website for CardinalKit, found at htt
 
 ## Instructions
 
-### First, install dependencies
+### First, open the `src` folder and install dependencies
 ```
+cd src
 npm install
 ```
 
@@ -14,12 +15,17 @@ npm install
 npm run dev
 ```
 
+The site should now appear at `http://localhost:8080/cardinalkit-docs`.
+
 ### To build for production
 ```
 npm run build
 ```
 
 ### To deploy to GitHub pages
+
+From the root folder of the project, run
+
 ```
 ./deploy.sh
 ```

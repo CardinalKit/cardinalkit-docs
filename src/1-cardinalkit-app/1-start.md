@@ -84,10 +84,6 @@ Once that is complete, your "Signing and Capabilities" page should look like thi
 
 <img src="./images/updated_bundle.png" alt="drawing" width="450"/><br />
 
-Finally, we need to set our app to use Swift 4.2. Select "Pods" (in the left hand sidebar) > "CardinalKit" (tucked away in a drawer indicated by the green box) > "Build Settings" > "Swift Compiler Language" > "Swift Language Version" > "Swift 4.2". This process is illustrated below. You will have to scroll a bit to get to this part of the file.
-
-<img src="./images/swift.png" alt="drawing" width="750"/>
-
 ## 5. Wait for Reindexing to Complete
 
 Xcode takes a while to open a project. Wait until Xcode is finished indexing the project. At the top of Xcode, there will be light blue progress bar showing this. Once it is complete, and no red errors pop up, we can run the project. This can take anywhere from 5 to 10 minutes.
