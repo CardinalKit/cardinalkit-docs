@@ -7,6 +7,8 @@ order: 3
 
 # App Customization Guide
 
+## 1. Configuration Options
+
 CardinalKit provides quick customization options for your health research application through the **CKConfiguration.plist** file, located in the **/CardinalKit-Example/Supporting Files** folder. This file is a spreadsheet that maps CardinalKit-defined keys to user-selected values. This reference shows you how to customize that file to suit your needs. Every key must have a value or the app will crash.
 
 <img src="./images/swiftui.png" alt="drawing" width="650"/>
@@ -92,3 +94,11 @@ The ```Login-Sign-In-With-Apple```, ```Login-Sign-In-With-Google```, ```Login-Si
 | Key     | Value                                     |
 |---------|-------------------------------------------|
 | Enabled | Whether identity provider sign in is enabled (1 or 0) |
+
+
+## 2. Create a ResearchKit Survey
+
+Using CardinalKit, you can create [ResearchKit](https://www.researchandcare.org/) surveys that automatically upload their results to your Firestore database.
+
+<iframe width="640" height="296" src="https://www.loom.com/embed/2943f9f789864334961681bb36e2ece0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
