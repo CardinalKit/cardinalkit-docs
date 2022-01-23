@@ -116,6 +116,8 @@ CardinalKit supports both **Email/Password Authentication** and **Sign In With A
 
 ### Setting up Email/Password Authentication
 
+In Xcode, pen the CKConfiguration.plist file in Xcode and edit the **Enabled** key under the **Sign in with User/Password** key to **1**. (If you have just cloned the project, this is already done for you.)
+
 In your Firebase project, click on Authentication. Then click on "Email/Password". 
 
 ::: tip
@@ -145,7 +147,7 @@ Read the entire "Before You Begin" section of the Authenticate Using Apple on iO
 In your Firebase project, navigate to "Authentication" > "Sign-in method" and click on "Add Provider".
 
 <Example>
-<img src="./images/apple-sign-in-step1.png" alt="Apple Sign In Setup Step 1" width="650" />
+<img src="./images/apple-sign-in-step1.png" alt="Apple Sign In Setup Step 1" width="800" />
 </Example>
 
 <br />
@@ -167,6 +169,26 @@ Set Apple to "Enabled".
 <br />
 
 The last step is to open the CKConfiguration.plist file in Xcode and edit the **Enabled** key under the **Sign in with Apple** key to **1**.
+
+### Setting up Sign In With Google (Optional)
+
+To implement Google Sign In with your CardinalKit application, you will need to create a custom URL scheme in your Xcode project. In Xcode, open your CardinalKit project and double-click the project name in the navigator view on the left. Select your project from the "Targets" section and then select the "Info" tab and expand the "URL Types" section.
+
+<Example>
+<img src="./images/google-setup-1.png" alt="Google Sign In Setup Step 1" width="800" />
+</Example>
+
+<br />
+
+Click the **+** button and a URL scheme with your Reversed Client ID. This can be found by opening your **GoogleService-Info.plist** file and looking for the **REVERSED_CLIENT_ID** key. When this is complete your project should look like this:
+
+<Example>
+<img src="./images/google-setup-2.png" alt="Google Sign In Setup Step 2" width="800" />
+</Example>
+
+<br />
+
+The last step is to open the CKConfiguration.plist file in Xcode and edit the **Enabled** key under the **Sign in with Google** key to **1**.
 
 ## 5. Add Custom Rules to the Firebase Database
 
