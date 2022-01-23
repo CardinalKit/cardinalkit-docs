@@ -38,7 +38,10 @@ The default CardinalKit sample app with no CKConfiguration.plist changes.
 | Health Records               | Access user health records using Apple's FHIRModels by setting Enabled to 1                                                          |
 | Health Permissions Text      | Subtext for requesting health permisions                                                                                             |
 | Background Read Frequency    | immediate, hourly, daily, or weekly: How often to read from HealthKit data records                                                   |
-| Login-Sign-In-With-Apple     | See below                                                                                                                            |
+| Login-Sign-In-With-Apple        | See below                                                                                                                            |
+| Login-Sign-In-With-Facebook     | See below                                                                                                                            |
+| Login-Sign-In-With-Google       | See below                                                                                                                            |
+| Login-Sign-In-With-UserPassword | See below                                                                                                                            |
 | Login-Passwordless           | Sign in using a passwordless setup (this process also needs to be activated on Firebase — refer to our documentation to get started) |
 | Login Step Title             | Title for logging in                                                                                                                 |
 | Login Step Text              | Subtext for logging in                                                                                                               |
@@ -52,6 +55,7 @@ The default CardinalKit sample app with no CKConfiguration.plist changes.
 | HealthKit Data to Read       | A list of HealthKit Object types to read from the user (see: HealthKit Object Types)                                                 |
 | Consent Form                 | See below. At least 1 section is required.                                                                                           |
 | Onboarding                   | See below. At least 1 panel is required.                                                                                             |
+| Use Cloud Surveys            | Enables surveys created from the web dashboard to appear in Tasks. If disabled, will show locally created surveys in Tasks.          |
 
 ### Consent Form Specifications
 
@@ -81,12 +85,10 @@ The ```Onboarding``` key is an array of dictionary items. Each dictionary repres
 | Description | A description for the page      |
 | Logo        | An emoji or number for the page |
 
-### Sign in with Apple
+### Sign in with Identity Provides
 
-The ```Login-Sign-In-With-Apple``` key is an array of dictionary items. Before turning this feature on, make sure you have taken care of the necessary setup.
+The ```Login-Sign-In-With-Apple```, ```Login-Sign-In-With-Google```, ```Login-Sign-In-With-Facebook``` and ```Login-Sign-In-With-UserPassword``` keys are arrays of dictionary items. Before turning this feature on, make sure you have taken care of the necessary setup for each provider in Firebase.
 
 | Key     | Value                                     |
 |---------|-------------------------------------------|
-| Enabled | Whether Apple sign in is enabled (1 or 0) |
-| Title   | A title for the sign in invocation        |
-| Text    | Text to go with the sign in process       |
+| Enabled | Whether identity provider sign in is enabled (1 or 0) |
