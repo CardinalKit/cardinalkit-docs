@@ -116,24 +116,32 @@ CardinalKit supports both **Email/Password Authentication** and **Sign In With A
 
 ### Setting up Email/Password Authentication
 
-In Xcode, pen the CKConfiguration.plist file in Xcode and edit the **Enabled** key under the **Sign in with User/Password** key to **1**. (If you have just cloned the project, this is already done for you.)
+In Xcode, open the CKConfiguration.plist file in Xcode and edit the **Enabled** key under the **Sign in with User/Password** key to **1**. (If you have just cloned the project, this is already done for you.)
 
-In your Firebase project, click on Authentication. Then click on "Email/Password". 
+<br />
+
+<Example>
+<img src="./images/email_authentication-1.png" alt="Email/Password Authentication Setup Step 1" width="800">
+</Example>
+
+<br />
+
+In your Firebase console, click on "Authentication", then click on "Email/Password". 
+
+<Example>
+<img src="./images/email_authentication-2.png" alt="Email/Password Authentication Setup Step 2" width="800"/>
+</Example>
 
 ::: tip
 If you have already set up an authentication method and are adding another one, you will see a different screen at this step. In that case, click on "Sign-In Method" at the top and click "Add New Provider", instead.
 :::
-
-<Example>
-<img src="./images/email_authentication.png" alt="Email/Password Authentication Setup Step 1" width="650"/>
-</Example>
 
 <br />
 
 On the next screen, enable "Email/Password Sign On" and click "Save".
 
 <Example>
-<img src="./images/email_authentication-2.png" alt="Email/Password Authentication Setup Step 2" width="650" />
+<img src="./images/email_authentication-3.png" alt="Email/Password Authentication Setup Step 3" width="800" />
 </Example>
 
 <br />
@@ -172,10 +180,38 @@ The last step is to open the CKConfiguration.plist file in Xcode and edit the **
 
 ### Setting up Sign In With Google (Optional)
 
-To implement Google Sign In with your CardinalKit application, you will need to create a custom URL scheme in your Xcode project. In Xcode, open your CardinalKit project and double-click the project name in the navigator view on the left. Select your project from the "Targets" section and then select the "Info" tab and expand the "URL Types" section.
+First, open your Firebase console, click on the "Authentication" tab, then click on "Sign In Method", then click on "Add New Provider".
 
 <Example>
-<img src="./images/google-setup-1.png" alt="Google Sign In Setup Step 1" width="800" />
+<img src="./images/google-setup-step-1.png" alt="Google Sign In Setup Step 1" width="800" />
+</Example>
+
+<br />
+
+Now, click on "Google" in the list of sign-in providers.
+
+<br />
+
+<Example>
+<img src="./images/google-setup-step-2.png" alt="Google Sign In Setup Step 2" width="800" />
+</Example>
+
+<br />
+
+Then, fill in your project's public facing name, choose a project support email address, and click "Save".
+
+<br />
+
+<Example>
+<img src="./images/google-setup-step-3.png" alt="Google Sign In Setup Step 3" width="800" />
+</Example>
+
+<br />
+
+Next, you will need to create a custom URL scheme in your Xcode project. In Xcode, open your CardinalKit project and double-click the project name in the navigator view on the left. Select your project from the "Targets" section and then select the "Info" tab and expand the "URL Types" section.
+
+<Example>
+<img src="./images/google-setup-step-4.png" alt="Google Sign In Setup Step 4" width="800" />
 </Example>
 
 <br />
@@ -183,12 +219,16 @@ To implement Google Sign In with your CardinalKit application, you will need to 
 Click the **+** button and a URL scheme with your Reversed Client ID. This can be found by opening your **GoogleService-Info.plist** file and looking for the **REVERSED_CLIENT_ID** key. When this is complete your project should look like this:
 
 <Example>
-<img src="./images/google-setup-2.png" alt="Google Sign In Setup Step 2" width="800" />
+<img src="./images/google-setup-step-5.png" alt="Google Sign In Setup Step 5" width="800" />
 </Example>
 
 <br />
 
 The last step is to open the CKConfiguration.plist file in Xcode and edit the **Enabled** key under the **Sign in with Google** key to **1**.
+
+<Example>
+<img src="./images/google-setup-step-6.png" alt="Google Sign In Setup Step 6" width="800" />
+</Example>
 
 ## 5. Add Custom Rules to the Firebase Database
 
