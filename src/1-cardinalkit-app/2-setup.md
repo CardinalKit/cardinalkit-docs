@@ -100,10 +100,18 @@ Fill out the registration form using the bundle ID you selected on while creatin
 <br />
 <br />
 
-Download the "GoogleService-Info.plist" file when prompted. There will be a "GoogleService-Info.plist" in the Xcode project as well located in "CardinalKit-Example" > "CardinalKit" > "Supporting Files". Replace this one with the new file you just downloaded. Run the app again and make sure no errors pop up.
+Download the "GoogleService-Info.plist" file when prompted. Keep a note of where this file was downloaded on your computer.
 
 <Example>
-<img src="./images/plist.png" alt="GoogleService-Info.plist Setup" width="650"/>
+<img src="./images/plist.png" alt="Link Firebase to App - Step 1" width="800"/>
+</Example>
+
+<br />
+
+There will be a "GoogleService-Info.plist" in the Xcode project as well located in "CardinalKit-Example" > "CardinalKit" > "Supporting Files". Delete the existing file and drag in the new file that you just downloaded in the previous step. Run the app again and make sure no errors pop up.
+
+<Example>
+<img src="./images/google-plist.png" alt="Link Firebase to App - Step 2" width="800">
 </Example>
 
 <br />

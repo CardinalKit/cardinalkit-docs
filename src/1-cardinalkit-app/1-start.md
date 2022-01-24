@@ -27,6 +27,12 @@ You will also need to install [Cocoapods](https://cocoapods.org/), a package man
 sudo gem install cocoapods
 ```
 
+If you have homebrew installed on your Mac, alternative you can also run:
+
+```
+brew install cocoapods
+```
+
 ## 2. Download the Template Project
 
 Our open-source project is available [on our Github](https://github.com/cardinalkit/cardinalkit)</a>. If you are familiar with Git, you can clone the project to your Mac in your terminal as follows:
@@ -51,6 +57,8 @@ cd CardinalKit-Example
 pod install
 ```
 </Example>
+
+
 
 ## 4. Open the Project in Xcode
 
@@ -92,7 +100,7 @@ Xcode takes a while to open a project. Wait until Xcode is finished indexing the
 
 ## 6. Test Your App
 
-Specify the target for deployment. Select either your phone (if it is plugged in) or pick a device to simulate (we recommend iPhone 11 and iOS 14 or greater). Press the "Play" button, shown in green below to run the app in the simulator. The first time you build the app, it will take 5 to 10 minutes due to it having to load all of the frameworks for the first time.
+Specify the target for deployment. Select either your phone (if it is plugged in) or pick a device to simulate (we recommend iPhone 11 and iOS 14 or greater). Press the "Play" button, shown below to run the app in the simulator. The first time you build the app, it will take 5 to 10 minutes due to it having to load all of the frameworks for the first time.
 
 When the simulator boots up and opens up the app, you may be faced with a white screen for a few seconds to a minute. This is normal for the simulator on the first run of the app. Your project may show several warnings indicated by a yellow triangle "⚠️" but that is fine.
 
