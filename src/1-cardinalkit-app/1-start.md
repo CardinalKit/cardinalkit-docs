@@ -76,7 +76,7 @@ At some point during this process, the project may ask to request a part of your
 
 <img src="./images/downloaded.png" alt="drawing" width="450"/>
 
-## 4. Configure the Project
+## 5. Configure the Project
 
 Click on the main root project in the sidebar and change the iOS bundle ID and team to match your project. 
 
@@ -92,13 +92,13 @@ Once that is complete, your "Signing and Capabilities" page should look like thi
 
 <img src="./images/updated_bundle.png" alt="drawing" width="450"/><br />
 
-## 5. Wait for Reindexing to Complete
+## 6. Wait for Reindexing to Complete
 
 Xcode takes a while to open a project. Wait until Xcode is finished indexing the project. At the top of Xcode, there will be light blue progress bar showing this. Once it is complete, and no red errors pop up, we can run the project. This can take anywhere from 5 to 10 minutes.
 
 <img src="./images/indexing.png" alt="drawing" width="750"/>
 
-## 6. Test Your App
+## 7. Test Your App
 
 Specify the target for deployment. Select either your phone (if it is plugged in) or pick a device to simulate (we recommend iPhone 11 and iOS 14 or greater). Press the "Play" button, shown below to run the app in the simulator. The first time you build the app, it will take 5 to 10 minutes due to it having to load all of the frameworks for the first time.
 

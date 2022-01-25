@@ -74,7 +74,7 @@ Finally, set the deploy location to "us-central" or any location close to your s
 <img src="./images/database-setup-2.png" alt="Choose the deploy location" width="450"/>
 </Example>
 
-## 3. Link App to Firebase Project
+## 2. Link App to Firebase Project
 
 The last step is to configure your CardinalKit app to communicate with your newly created Firebase database. In the sidebar, select "Project Overview" and then "iOS".
 
@@ -118,11 +118,7 @@ There will be a "GoogleService-Info.plist" in the Xcode project as well located 
 You don't need to continue through the rest of the steps and set up the Firebase SDK and initialization code in your app. This is already done for you in CardinalKit. Go through to step 5 and click on "Continue to Console".
 <br />
 
-## 4. Enabling Authentication
-
-CardinalKit supports both **Email/Password Authentication** and **Sign In With Apple**.
-
-### Setting up Email/Password Authentication
+## 3. Setting up Email/Password Authentication
 
 In Xcode, open the CKConfiguration.plist file in Xcode and edit the **Enabled** key under the **Sign in with User/Password** key to **1**. (If you have just cloned the project, this is already done for you.)
 
@@ -156,7 +152,7 @@ On the next screen, enable "Email/Password Sign On" and click "Save".
 
 You should now see that Email/Password authentication has been enabled.
 
-### Setting up Sign in with Apple (Optional)
+## 4. Setting up Sign in with Apple (Optional)
 
 Read the entire "Before You Begin" section of the Authenticate Using Apple on iOS Firebase tutorial and make sure you have the correct configurations for this feature.
 
@@ -186,7 +182,7 @@ Set Apple to "Enabled".
 
 The last step is to open the CKConfiguration.plist file in Xcode and edit the **Enabled** key under the **Sign in with Apple** key to **1**.
 
-### Setting up Sign In With Google (Optional)
+## 5. Setting up Sign In With Google (Optional)
 
 First, open your Firebase console, click on the "Authentication" tab, then click on "Sign In Method", then click on "Add New Provider".
 
@@ -238,7 +234,7 @@ The last step is to open the CKConfiguration.plist file in Xcode and edit the **
 <img src="./images/google-setup-step-6.png" alt="Google Sign In Setup Step 6" width="800" />
 </Example>
 
-## 5. Add Custom Rules to the Firebase Database
+## 6. Add Custom Rules to the Firebase Database
 
 The final step is to allow authorized users to upload data to Firebase.
 
