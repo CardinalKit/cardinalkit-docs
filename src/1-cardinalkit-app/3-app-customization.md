@@ -7,7 +7,7 @@ order: 3
 
 # App Customization Guide
 
-## 1. Configuration Options
+## Configuration Options
 
 CardinalKit provides quick customization options for your health research application through the **CKConfiguration.plist** file, located in the **/CardinalKit-Example/Supporting Files** folder. This file is a spreadsheet that maps CardinalKit-defined keys to user-selected values. This reference shows you how to customize that file to suit your needs. Every key must have a value or the app will crash.
 
@@ -96,15 +96,19 @@ The ```Login-Sign-In-With-Apple```, ```Login-Sign-In-With-Google```, ```Login-Si
 | Enabled | Whether identity provider sign in is enabled (1 or 0) |
 
 
-## 2. Create a ResearchKit Survey
+## Create a ResearchKit Survey
 
 Using CardinalKit, you can create [ResearchKit](https://www.researchandcare.org/) surveys that automatically upload their results to your Firestore database.
 
 <div style="position: relative; padding-bottom: 46.19093539054966%; height: 0;"><iframe src="https://www.loom.com/embed/2943f9f789864334961681bb36e2ece0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
-## 3. Create a ResearchKit Active Task
+## Create a ResearchKit Active Task
 
 Using CardinalKit, you can create [ResearchKit](https://www.researchandcare.org/) active tasks that automatically upload their results to your Firestore database.
 
 <div style="position: relative; padding-bottom: 42.1875%; height: 0;"><iframe src="https://www.loom.com/embed/6c9e11665bad4cfb93d0863148214309" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+## Customize your Consent Process
+
+<div style="position: relative; padding-bottom: 47.638190954773876%; height: 0;"><iframe src="https://www.loom.com/embed/f40186b0c35846b4b448cd6ceb707d26" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
