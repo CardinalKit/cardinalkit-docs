@@ -100,5 +100,11 @@ The ```Login-Sign-In-With-Apple```, ```Login-Sign-In-With-Google```, ```Login-Si
 
 Using CardinalKit, you can create [ResearchKit](https://www.researchandcare.org/) surveys that automatically upload their results to your Firestore database.
 
-<iframe width="640" height="296" src="https://www.loom.com/embed/2943f9f789864334961681bb36e2ece0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<div style="position: relative; padding-bottom: 46.19093539054966%; height: 0;"><iframe src="https://www.loom.com/embed/2943f9f789864334961681bb36e2ece0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+## 3. Create a ResearchKit Active Task
+
+Using CardinalKit, you can create [ResearchKit](https://www.researchandcare.org/) active tasks that automatically upload their results to your Firestore database.
+
+<div style="position: relative; padding-bottom: 42.1875%; height: 0;"><iframe src="https://www.loom.com/embed/6c9e11665bad4cfb93d0863148214309" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
