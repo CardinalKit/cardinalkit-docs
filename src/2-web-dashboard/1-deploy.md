@@ -15,52 +15,62 @@ CardinalKit offers a web dashboard that can be used to visualize mobile health d
 
 Before starting this section, you need to have configured a Firebase project and connected your CardinalKit iOS app to it. Please refer to 'Set up Application Infrastructure' if you haven't done this yet, then return to this section. If you have, then proceed to the next step:
  
- - Go to [firebase.google.com](https://firebase.google.com) and sign in with the same account that you set up for the mobile app.
+ Go to [firebase.google.com](https://firebase.google.com) and sign in with the same account that you set up for the mobile app.
  
- - Select the same Firebase project that you created previously.
+ Select the same Firebase project that you created previously.
  <br />
  <br />
  <img src="./images/project.png" alt="drawing" width="450"/>
  <br />
  <br />
- - Then select **Project Settings** in the configuration menu.
+ Then select **Project Settings** in the configuration menu.
  <br />
  <br />
  <img src="./images/settings.png" alt="drawing" width="450"/>
  <br />
  <br />
- - Now select **Add app** to create a new web application and associate it with Firebase.
+ Now select **Add app** to create a new web application and associate it with Firebase.
  <br />
  <br />
  <img src="./images/new-app.png" alt="drawing" width="775"/>
  <br />
  <br />
- - Click on the **web app** symbol.
+ Click on the **web app** symbol.
  <br />
  <br />
  <img src="./images/webapp.png" alt="drawing" width="450"/>
  <br />
  <br />
-  - Complete the Firebase form to register a new web app.
+Complete the Firebase form to register a new web app.
  <br />
  <br />
  <img src="./images/register1.png" alt="drawing" width="438"/>
  <br />
  <br />
-  - Copy the generated Firebase configuration.
+Copy the generated Firebase configuration.
  <br />
  <img src="./images/register2.png" alt="drawing" width="650"/>
  <br />
- - Open the ***cardinal-kit-web/.env*** file and replace the bolded keys with their values from the configuration you obtained in the last step.
+ Open the ***cardinal-kit-web/.env*** file and replace the bolded keys with their values from the configuration you obtained in the last step.
  <br />
  <br />
-   - VUE_APP_FIREBASE_API_KEY = "**apiKey**"
-   - VUE_APP_FIREBASE_AUTH_DOMAIN  = "**authDomain**"
-   - VUE_APP_FIREBASE_PROJECT_ID  = "**projectId**"
-   - VUE_APP_FIREBASE_STORAGE_BUCKET  = "**storageBucket**"
-   - VUE_APP_FIREBASE_MESSAGING_SENDER_ID  = "**messagingSenderId**"
-   - VUE_APP_FIREBASE_APP_ID = "**firebaseConfig.appId**"
-
+ ```
+ VUE_APP_FIREBASE_API_KEY = "**apiKey**"
+ VUE_APP_FIREBASE_AUTH_DOMAIN  = "**authDomain**"
+ VUE_APP_FIREBASE_PROJECT_ID  = "**projectId**"
+ VUE_APP_FIREBASE_STORAGE_BUCKET  = "**storageBucket**"
+ VUE_APP_FIREBASE_MESSAGING_SENDER_ID  = "**messagingSenderId**"
+ VUE_APP_FIREBASE_APP_ID = "**firebaseConfig.appId**"
+ ```
+ <br />
+ <br />
+ Now navigate to "Firestore Database" > "Indexes" in your Firebase console. Make sure "Composite" is selected.
+ <br />
+ <br />
+ <img src="./images/create-indexes.png" alt="indexes" width="800">
+ <br />
+ <br />
+ Please add the six indexes that are shown in the image above by clicking "Add Index". It may take a couple of minutes for the indexes to finish building.
 
 ## 2. Test the Dashboard Locally
 
@@ -130,6 +140,6 @@ Now, deploy your dashboard to Firebase:
 firebase deploy
 ```
 
-You will now be given a URL where you can see the dashboard live!
+You will now be given a URL where you can see the dashboard live! Now that your environment is set up, the next time you can just run `firebase deploy` to deploy your updates.
 
-Now that your environment is set up, the next time you can just run `firebase deploy` to deploy your updates.
+In order to log in to your dashboard, you will need to continue to the next step where you will <a href="/cardinalkit-docs/2-web-dashboard/2-settings.html#_1-create-admin-account">create an administrator account</a>.

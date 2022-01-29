@@ -66,7 +66,7 @@ Then click on **Firestore Database**:
 
 This is the database of the entire project, here you can see all the records of studies and users generated in the application.
 
-Create a new collection called **user_roles**, add a document with the name being the uid of the previously created administrator user.
+Create a new collection called **users_roles**, add a document with the name being the uid of the previously created administrator user.
 
 Finally add a field to the document called **rol** with value **superAdmin**.
 
