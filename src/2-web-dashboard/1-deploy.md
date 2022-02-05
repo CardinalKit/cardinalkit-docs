@@ -96,10 +96,10 @@ After having everything installed and configured, we can run the project.
 
 Once we confirm that our dashboard is working properly locally, we can deploy it to Firebase Hosting.
 
-First, make sure you are in the `cardinal-kit-web` directory in your terminal.
+First, make sure you are in the `cardinal-kit-web/src` directory in your terminal.
 
 ```bash
-cd cardinal-kit-web
+cd cardinal-kit-web/src
 ```
 
 Then, we need to install dependencies.
