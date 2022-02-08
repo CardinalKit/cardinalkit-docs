@@ -53,8 +53,7 @@ The default CardinalKit sample app with no CKConfiguration.plist changes.
 | Withdraw Text                | Subtext to show after withdrawing                                                                                                    |
 | Passcode On Return Text      | Text to show when user returns to app and sees passcode request                                                                      |
 | Consent Title                | Title of consent form document                                                                                                       |
-| Use Carekit                  | Enable a CareKit dashboard as a tab in the application                                                                               |
-| HealthKit Data to Read       | A list of HealthKit Object types to read from the user (see: HealthKit Object Types)                                                 |
+| Use CareKit                  | Enable the Schedule and Contact tabs from CareKit                                                                      |
 | Consent Form                 | See below. At least 1 section is required.                                                                                           |
 | Onboarding                   | See below. At least 1 panel is required.                                                                                             |
 | Use Cloud Surveys            | Enables surveys created from the web dashboard to appear in Tasks. If disabled, will show locally created surveys in Tasks.          |
@@ -101,6 +100,10 @@ The ```Login-Sign-In-With-Apple```, ```Login-Sign-In-With-Google```, ```Login-Si
 Using CardinalKit, you can create [ResearchKit](https://www.researchandcare.org/) surveys that automatically upload their results to your Firestore database.
 
 <div style="position: relative; padding-bottom: 46.19093539054966%; height: 0;"><iframe src="https://www.loom.com/embed/2943f9f789864334961681bb36e2ece0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+## Using Navigation Logic in Surveys
+
+<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/4d754e6ec81046e29d0aba4efdccc210" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ## Create a ResearchKit Active Task
 
