@@ -1,11 +1,11 @@
 ---
 home: false
-title: Deploy the Dashboard
+title: Setting up the Dashboard
 footer: Stanford Byers Center for Biodesign
 order: 1
 ---
 
-# Deploying the Web Dashboard
+# Setting Up the Web Dashboard
 
 CardinalKit offers a web dashboard that can be used to visualize mobile health data and survey responses, as well as create and update surveys.
 
@@ -72,9 +72,140 @@ Copy the generated Firebase configuration.
  <br />
  Please add the six indexes that are shown in the image above by clicking "Add Index". It may take a couple of minutes for the indexes to finish building.
 
-## 2. Test the Dashboard Locally
+## 2. Create an administrator account
 
-Once we have configured firebase complements, the next step is to run the service of your website locally. You can also deploy it to the cloud using [Firebase Hosting](https://firebase.google.com/docs/hosting). 
+ <br />
+
+ To manage your dashboard you need to create an Administrator account. This is created from the Firebase console.
+
+ From the [Firebase console](https://console.firebase.google.com), enter the **Authentication** section.
+
+ <br />
+
+ <img src="./images/authentication.png" alt="drawing" width="550"/>
+
+ <br />
+ <br />
+
+ And then add a new user.
+ 
+ <br />
+
+ <img src="./images/newuser.png" alt="drawing" width="850"/>
+
+ <br />
+ <br />
+
+Enter a username and password for the administrator user.
+
+<br />
+
+<img src="./images/userpassword.png" alt="drawing" width="750"/>
+
+<br />
+<br />
+
+## 3. Add the admin role
+
+Now you need to indicate to the dashboard that this new user is an **administrator** user. 
+
+User roles are managed in Firestore Database. For users created from the web, this process will be automatic, it is necessary to do it by hand only once for the administrator user.
+
+First copy the **UID** of the user you just created:
+
+<br />
+
+<img src="./images/useruid.png" alt="drawing" width="750"/>
+
+<br />
+<br />
+
+Then click on **Firestore Database**:
+
+<br />
+
+<img src="./images/firestore.png" alt="drawing" />
+
+<br />
+<br />
+
+This is the database of the entire project, here you can see all the records of studies and users generated in the application.
+
+Create a new collection called **users_roles**, add a document with the name being the uid of the previously created administrator user.
+
+Finally add a field to the document called **rol** with value **superAdmin**.
+
+<br />
+
+<img src="./images/add_role.png" alt="drawing" width="850"/>
+
+## 4. Update Firebase Security Rules
+
+In order for your administrator user to be able to access the dashboard, you need to update the **Firebase Security Rules**. This is done from the Firebase console. 
+
+Open **Firestore Database** in the Firebase console, and click on the **Rules** tab. Then replace the rules with the following:
+
+```
+rules_version = '2';
+service cloud.firestore {
+	match /databases/{database}/documents{
+  	match /studies/{studyId}{
+    	allow write: if request.auth!= null
+        allow read: if request.auth!= null
+   		
+        function accessToStudy() {
+   			let data = get(/databases/$(database)/documents/users_roles/$(request.auth.uid)).data;
+   			return "studies" in data && studyId in data.studies;
+   		}
+        
+        match /users/{userId}/{path_=**}{
+        	allow write: if request.auth!= null && request.auth.uid == userId
+        	
+            function accessToUser(){
+                let data = get(/databases/$(database)/documents/users_roles/$(request.auth.uid)).data;
+                return "users_access" in data && userId in data.users_access
+        	}
+
+          allow read: if request.auth!= null && 
+          (
+            request.auth.uid == userId ||
+            (
+              exists(/databases/$(database)/documents/users_roles/$(request.auth.uid)) &&
+              (
+                get(/databases/$(database)/documents/users_roles/$(request.auth.uid)).data.rol == "superAdmin" ||
+                (
+                  get(/databases/$(database)/documents/users_roles/$(request.auth.uid)).data.rol == "doctor" &&
+                  (
+                    accessToStudy() ||
+                    accessToUser()
+                  )
+                )
+              )
+            )
+          )
+        }
+        match /surveys/{surveyId}/{path_=**}{
+        	allow write: if request.auth.uid != null 
+        	allow read: if request.auth.uid != null
+        }
+        
+      }
+      match /users_roles/{user}/{path_=**}{
+      	allow write: if request.auth.uid != null &&
+        	(request.auth.uid == user || 
+          	exists(/databases/$(database)/documents/users_roles/$(request.auth.uid)) &&
+          	get(/databases/$(database)/documents/users_roles/$(request.auth.uid)).data.rol == "superAdmin")
+        allow read: if request.auth.uid != null
+      }
+	}
+}
+```
+
+Click **Publish** to save your new rules.
+
+## 5. Test the Dashboard Locally
+
+Once we have configured Firebase, you can test the dashboard locally. You can also deploy it to the cloud using [Firebase Hosting](https://firebase.google.com/docs/hosting) (See step 6 below).
 
 ```bash
  cd cardinal-kit-web
@@ -141,5 +272,3 @@ firebase deploy
 ```
 
 You will now be given a URL where you can see the dashboard live! Now that your environment is set up, the next time you can just run `firebase deploy` to deploy your updates.
-
-In order to log in to your dashboard, you will need to continue to the next step where you will <a href="/cardinalkit-docs/2-web-dashboard/2-settings.html#_1-create-admin-account">create an administrator account</a>.
