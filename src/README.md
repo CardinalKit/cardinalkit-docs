@@ -1,10 +1,3 @@
----
-home: true
-title: CardinalKit
-description: An Open Source Platform & Codebase for Digital Health Research and Applications
-actionText: Get Started
-actionLink: /1-cardinalkit-app/1-start
-features:
-- title: CardinalKit Documentation
-footer: Stanford Byers Center for Biodesign
----
+# Welcome
+
+CardinalKit minimizes your research costs and time required to survey individuals by providing your team with a system that automatically takes care of building an app and storing data. The goal of this guide is to get your cloud-enabled research app up and running with minimal effort on your part.

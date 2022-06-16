@@ -36,9 +36,26 @@ const getChildren = function(parent_path, dir) {
         .map(file => file.path);
 }
 
+const { defaultTheme } = require('vuepress')
+
 module.exports = {
-  getChildren,
-  theme: 'api',
+  theme: defaultTheme({
+      navbar: [
+          {
+              text: 'Home',
+              link: '/'
+          },
+          {
+              text: 'Github',
+              link: 'https://github.com/cardinalkit'
+          }
+      ],
+      sidebar: [
+          '/1-cardinalkit-app/1-start.md',
+          '/2-web-dashboard/1-deploy.md',
+          '/3-contributing/README.md'
+      ]
+  }),
   title: 'CardinalKit Documentation',
   base: '/cardinalkit-docs/'
 }
