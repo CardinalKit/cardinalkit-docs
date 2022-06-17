@@ -1,6 +1,6 @@
 ---
 home: false
-title: Set Up Application Infrastructure
+title: Set Up Backend Infrastructure
 footer: CardinalKit
 order: 2
 ---

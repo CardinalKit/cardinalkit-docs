@@ -15,7 +15,7 @@ TODOs.md
 .cache
 
 # Docs dist directory
-/vuepress
+dist
 
 # Typescript build dist
 packages/@vuepress/shared-utils/lib/

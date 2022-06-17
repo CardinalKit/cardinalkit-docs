@@ -1,11 +1,12 @@
 const { defaultTheme } = require('vuepress')
+const { searchPlugin } = require('@vuepress/plugin-search')
 
 module.exports = {
     theme: defaultTheme({
         navbar: [
             {
                 text: 'Home',
-                link: '/'
+                link: 'https://cardinalkit.org'
             },
             {
                 text: 'Github',
@@ -15,20 +16,17 @@ module.exports = {
         sidebar: [
             {
                 text: 'CardinalKit iOS App',
-                link: '/1-cardinalkit-app/1-start.md',
+                link: '/1-cardinalkit-app',
                 children: [
                     '/1-cardinalkit-app/1-start.md',
                     '/1-cardinalkit-app/2-setup.md',
                     '/1-cardinalkit-app/3-app-customization.md',
-                    '/1-cardinalkit-app/4-alternative-auth.md',
-                    '/2-web-dashboard/1-deploy.md',
-                    '/2-web-dashboard/2-surveys.md',
-                    '/3-contributing/README.md'
+                    '/1-cardinalkit-app/4-alternative-auth.md'
                 ]
             },
             {
                 text: 'CardinalKit Web Dashboard',
-                link: '/2-web-dashboard/1-deploy.md',
+                link: '/2-web-dashboard',
                 children: [
                     '/2-web-dashboard/1-deploy.md',
                     '/2-web-dashboard/2-surveys.md',
@@ -45,5 +43,10 @@ module.exports = {
         ]
     }),
     title: 'CardinalKit Documentation',
-    base: '/cardinalkit-docs/'
+    base: '/cardinalkit-docs/',
+    plugins: [
+        searchPlugin({
+            // options
+        })
+    ]
 }
