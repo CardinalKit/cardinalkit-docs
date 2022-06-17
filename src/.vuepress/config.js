@@ -5,7 +5,7 @@ const markdownIt = require('markdown-it');
 const meta = require('markdown-it-meta');
 
 // Load all MD files in a specified directory and order by metadata 'order' value
-const getChildren = function(parent_path, dir) {
+const getChildren = function (parent_path, dir) {
     files = glob
         .sync(parent_path + (dir ? `/${dir}` : '') + '/**/*.md')
         .map(path => {
@@ -23,8 +23,8 @@ const getChildren = function(parent_path, dir) {
             if (path.endsWith('README')) {
                 path = path.slice(0, -6);
             }
-            console.log("path",path)
-            
+            console.log("path", path)
+
             return {
                 path,
                 order
@@ -39,23 +39,49 @@ const getChildren = function(parent_path, dir) {
 const { defaultTheme } = require('vuepress')
 
 module.exports = {
-  theme: defaultTheme({
-      navbar: [
-          {
-              text: 'Home',
-              link: '/'
-          },
-          {
-              text: 'Github',
-              link: 'https://github.com/cardinalkit'
-          }
-      ],
-      sidebar: [
-          '/1-cardinalkit-app/1-start.md',
-          '/2-web-dashboard/1-deploy.md',
-          '/3-contributing/README.md'
-      ]
-  }),
-  title: 'CardinalKit Documentation',
-  base: '/cardinalkit-docs/'
+    theme: defaultTheme({
+        navbar: [
+            {
+                text: 'Home',
+                link: '/'
+            },
+            {
+                text: 'Github',
+                link: 'https://github.com/cardinalkit'
+            }
+        ],
+        sidebar: [
+            {
+                text: 'CardinalKit iOS App',
+                link: '/1-cardinalkit-app/1-start.md',
+                children: [
+                    '/1-cardinalkit-app/1-start.md',
+                    '/1-cardinalkit-app/2-setup.md',
+                    '/1-cardinalkit-app/3-app-customization.md',
+                    '/1-cardinalkit-app/4-alternative-auth.md',
+                    '/2-web-dashboard/1-deploy.md',
+                    '/2-web-dashboard/2-surveys.md',
+                    '/3-contributing/README.md'
+                ]
+            },
+            {
+                text: 'CardinalKit Web Dashboard',
+                link: '/2-web-dashboard/1-deploy.md',
+                children: [
+                    '/2-web-dashboard/1-deploy.md',
+                    '/2-web-dashboard/2-surveys.md',
+                    '/3-contributing/README.md'
+                ]
+            },
+            {
+                text: 'Contributing',
+                link: '/3-contributing',
+                children: [
+                    '/3-contributing/README.md'
+                ]
+            }
+        ]
+    }),
+    title: 'CardinalKit Documentation',
+    base: '/cardinalkit-docs/'
 }
