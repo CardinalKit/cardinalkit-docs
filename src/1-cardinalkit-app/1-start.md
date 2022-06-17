@@ -9,10 +9,6 @@ order: 1
 
 <img src="./images/doctors.svg" alt="drawing" width="250"/><br />
 
-Thanks for choosing CardinalKit! CardinalKit minimizes your research costs and time required to survey individuals by providing your team with a system that automatically takes care of building an app and storing data. The goal of this guide is to get your cloud-enabled research app up and running with minimal effort on your part.
-
-It's really easy to get started with CardinalKit. This guide will help you set up our example app in under 30 minutes.
-
 ## 1. Install Xcode and Cocoapods
 
 iOS apps are natively built in Xcode, an app available on the Apple Mac App Store. Download the most recent version of Xcode available, if you have not already. We recommend having at least Xcode v13.
@@ -35,13 +31,11 @@ brew install cocoapods
 
 ## 2. Download the Template Project
 
-Our open-source project is available [on our Github](https://github.com/cardinalkit/cardinalkit)</a>. If you are familiar with Git, you can clone the project to your Mac in your terminal as follows:
+Our open-source project is available [on our Github](https://github.com/cardinalkit/cardinalkit). If you are familiar with Git, you can clone the project to your Mac in your terminal as follows:
 
-<Example>
 ```
 git clone https://github.com/CardinalKit/CardinalKit.git
 ```
-</Example>
 
 Alternatively, you can also download the project as a zip file by clicking "Code" > "Download Zip". If that doesn't work, [click here](https://github.com/CardinalKit/CardinalKit/archive/main.zip). to download the file directly.
 
@@ -51,14 +45,10 @@ Alternatively, you can also download the project as a zip file by clicking "Code
 
 In your terminal, navigate to the folder where your template project files were downloaded. Change to the 'CardinalKit-Example' subfolder, where the template app is located and run 'pod install' to install dependencies via CocoaPods. This process may take a few minutes.
 
-<Example>
 ```
 cd CardinalKit-Example
 pod install
 ```
-</Example>
-
-
 
 ## 4. Open the Project in Xcode
 
