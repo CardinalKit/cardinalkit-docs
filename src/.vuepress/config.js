@@ -3,14 +3,12 @@ const { searchPlugin } = require('@vuepress/plugin-search')
 
 module.exports = {
     theme: defaultTheme({
+        repo: 'cardinalkit/cardinalkit',
+        contributors: false,
         navbar: [
             {
                 text: 'Home',
                 link: 'https://cardinalkit.org'
-            },
-            {
-                text: 'Github',
-                link: 'https://github.com/cardinalkit'
             }
         ],
         sidebar: [
@@ -20,8 +18,7 @@ module.exports = {
                 children: [
                     '/1-cardinalkit-app/1-start.md',
                     '/1-cardinalkit-app/2-setup.md',
-                    '/1-cardinalkit-app/3-app-customization.md',
-                    '/1-cardinalkit-app/4-alternative-auth.md'
+                    '/1-cardinalkit-app/3-app-customization.md'
                 ]
             },
             {
@@ -29,8 +26,7 @@ module.exports = {
                 link: '/2-web-dashboard',
                 children: [
                     '/2-web-dashboard/1-deploy.md',
-                    '/2-web-dashboard/2-surveys.md',
-                    '/3-contributing/README.md'
+                    '/2-web-dashboard/2-surveys.md'
                 ]
             },
             {

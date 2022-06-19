@@ -1,13 +1,17 @@
 ---
 home: false
-title: Survey Creation
+title: Creating Surveys
 footer: Stanford Byers Center for Biodesign
 order: 3
 ---
 
 # Survey Creation
 
-CardinalKit allows you to create custom surveys that users can complete. They can be listed on the Tasks screen, or you can schedule them to be completed on specific days or within a certain period. Surveys can also be assigned to a specific user or a study.
+CardinalKit allows you to create custom surveys that users can complete on their mobile apps. These surveys can be listed on the *Tasks* screen on the mobile app, or you can schedule them to be completed on specific days or within a certain period. Surveys can also be assigned to a specific user or a study.
+
+::: tip
+In order for surveys created via the dashboard to appear in the mobile app, *Use Cloud Surveys* should be set to true in *CKConfiguration.plist*.
+:::
 
 ## 1. Create a Survey
 
@@ -27,25 +31,22 @@ Surveys are made up of several steps, these can be forms (one step with several 
 
 <img src="./images/surveys/3-form.png" alt="drawing" width="750"/>
 
-### - Add a Question
+### - Adding Questions To Your Survey
 
-to add a question click on add question and select the type of question you want to add
-
-All questions have a unique identifier and question text
+To add a question, click on *Add Question* and select the type of question you want to add.
 
 <img src="./images/surveys/4-addquestion.png" alt="drawing" width="450"/>
 
-### - Create a Form
+### - Creating a Multi-Question Form
 
-To create a form click on add question and in the selectable list (Type Of Question) locate the option form.
+You can embed multiple questions into a single form. To create a form, click on *Add question* and in the dropdown list (Select the type of question) choose the *form* option.
 
 <img src="./images/surveys/5-select.png" alt="drawing" width="750"/>
 
-Enter the title and a description, the identifier will be a unique id that will serve to distinguish the questions in the database.
+Enter a title, unique identifier, and description for the form. The identifier will be used to distinguish this form in the database.
 
-You can add all the questions you need by clicking on the Add Form question button and selecting the type of question
+You can multiple questions to the form by clicking on the *Add Form Question* button, then selecting the type of question you wish to add, and repeating until you have added all the questions you need.
 
-To add questions to a form, click on add form question.
 
 ## 2. Survey Types
 
@@ -53,128 +54,141 @@ To add questions to a form, click on add form question.
 
 #### Text: 
 Create an open question with a single line text answer
+
 #### Text Area: 
 Create an open question with a text type answer with several lines to answer
+
 #### Single Choice: 
 Create a multiple choice question with a single answer
+
 #### Multiple Choice: 
 Create a multiple choice question with a choice of 1 or more
+
 #### Form:
 Create a form with several questions on a single page
+
 #### Scale: 
 Create a question with a numerical answer and a graphic scroll
+
 #### Boolean: 
 Create a question with a yes or no answer
+
 #### Instruction: 
 Create an instructions page can be displayed at the beginning of the entire questionnaire
+
 #### Signature: 
 Create a screen to collect a user's signature
+
 #### Date: 
 Create a question with a dated answer
+
 #### Numeric: 
-create a question with a numerical answer in a text box
+Create a question with a numerical answer in a text box
+
 #### E-mail: 
 Create a field for email input
+
 #### Location: 
 Collect an address or location of the user
+
 #### Text scale: 
 Create a scale question with text values
+
 #### TimeInterval: 
 Create a question to answer with a time interval
+
 #### Height: 
-Pick up the user's height
-#### Weigh: 
-Pick up the weight of the user
+Obtain the user's height
+
+#### Weight: 
+Obtain the user's weight
+
 #### Socioeconomic: 
-Create a scale of socioeconomic levels for the user's choice
+Create a scale of socioeconomic levels for the user to choose from
+
 #### Continuous Scale: 
 Create a numerical scale including decimal numbers
+
 #### Picker: 
 Create a select with multiple options
+
 #### Summary: 
-show the user a final message
+Show the user a final message
 
-<img src="./images/surveys/6-example.png" alt="drawing" width="350"/>
 
-<br />
+## 3. Scheduling Surveys
 
-<img src="./images/surveys/7-example2.png" alt="drawing" width="350"/>
+The survey you created in the previous portion of the guide can also be scheduled to appear on the calendar of the mobile app on specific days.
 
-## 3. Assigning a Survey to a Study
-
-The surveys previously created in addition to being able to be filled from the main screen can be added to the calendar and to be filled in specific days or with periodically
-
-To add a questionnaire to a complete study, on the survey page click on the scheduler button
+To add a questionnaire to the schedule, on the survey page, click on the *Scheduler* button.
 
 <img src="./images/surveys/8-scheduler.png" alt="drawing" width="650"/>
 
 <br />
 <br />
 
-There you will see a calendar and a table with the currently assigned surveys
-To assign a new one, click on the "Add survey to calendar" button.
+There you will see a calendar and a table with the currently scheduled surveys. To schedule a new one, click on the *Add Survey to Calendar* button.
 
 <img src="./images/surveys/9-calendar.png" alt="drawing" width="650"/>
 
 <br />
 <br />
 
-A pop up will appear where you can indicate from which date to which date you want the survey to be filled in the interval of days that you want to pass from one occurrence to another
+A pop up will appear where you can select the survey you wish to schedule, as well as indicate the start and end date of your survey, as well as the interval of days in between each day the survey will be offered to the user. You can also add a description that will appear on the mobile app calendar.
 
 <img src="./images/surveys/10-form.png" alt="drawing" width="650"/>
 
 <br />
 <br />
 
-Finally a picker to select all the existing surveys and a short description that the user will read in the calendar of your application
-
 ## 4. Assigning a Survey to a Specific User
 
-In addition to assigning them to a complete study, you can assign surveys to specific users.
+It is also possible to assign surveys to specific users.
 
-For this you must go to the studies section/Patients -> select the user to whom you want to add the survey by clicking the view button
+To do this, go to the *Patients* screen and select the patient you want to assign the survey to by clicking the *View* button next to their user ID.
 
 <img src="./images/surveys/11-surveypatient.png" alt="drawing" width="650"/>
 
 <br />
 <br />
 
-There you will see several sections of data including one called surveys, select it
+Now click the *Surveys* button.
 
 <img src="./images/surveys/12-select-survey.png" alt="drawing" width="650"/>
 
 <br />
 <br />
 
-In this new screen you will be able to see the summary of all the responses that the user has had in front of the assigned surveys, click on scheduler to proceed to assign a new one.
+Now you should be able to see all the surveys this user has taken, as well as schedule a new survey for them to take by clicking the *Scheduler* button.
 
 <img src="./images/surveys/13-scheduler.png" alt="drawing" width="650"/>
 
 <br />
 <br />
 
-You will see the calendar and the table of assigned surveys press add survey to calendar and fill in the form in the same way that you filled it in to add the surveys to a study
+Now you can select a survey and enter in the start and end dates as well as a description.
 
 <img src="./images/surveys/14-form.png" alt="drawing" width="650"/>
 
  ## 5. Download Answers
 
-CardinalKit features the ability to download all the responses of all users to a specific survey in a single .csv file.
+CardinalKit features the ability to download all the responses of all users to a specific survey in a single comma-separated value (CSV) file.
 <br />
 <br />
-go to the surveys tab and select the details button for a specific survey
+To download results as a CSV file, go to the surveys tab and select the *Details* button for a specific survey.
 
 <img src="./images/surveys/15-edit.png" alt="drawing" width="650"/>
 
 <br />
 <br />
 
-You will find the summary of all survey responses separated by question
-click on the download button and you will get a csv file with all the answers organized
+You will see the results for each question in a table. You can download all the results as a CSV file by clicking the *Download* button at the bottom of the table.
 
 <img src="./images/surveys/16-download.png" alt="drawing" width="650"/>  
 
 <br />
 <br />
+
+If you open the CSV file in a spreadsheet editor, you will see the details of each question and each user's response as shown below.
 
 <img src="./images/surveys/17-example.png" alt="drawing" width="1050"/>  

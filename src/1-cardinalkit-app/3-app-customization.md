@@ -1,6 +1,6 @@
 ---
 home: false
-title: App Customization Guide
+title: Customize Your App
 footer: Alternova Inc
 order: 3
 ---
@@ -86,7 +86,7 @@ The ```Onboarding``` key is an array of dictionary items. Each dictionary repres
 | Description | A description for the page      |
 | Logo        | An emoji or number for the page |
 
-### Sign in with Identity Provides
+### Sign in with Identity Providers
 
 The ```Login-Sign-In-With-Apple```, ```Login-Sign-In-With-Google```, ```Login-Sign-In-With-Facebook``` and ```Login-Sign-In-With-UserPassword``` keys are arrays of dictionary items. Before turning this feature on, make sure you have taken care of the necessary setup for each provider in Firebase.
 

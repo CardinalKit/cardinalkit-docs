@@ -5,7 +5,7 @@ footer: CardinalKit
 order: 2
 ---
 
-# Set Up Application Infrastructure
+# Set Up Backend Infrastructure
 
 <img src="./images/doctors.svg" alt="Doctors using apps" width="250"><br />
 
