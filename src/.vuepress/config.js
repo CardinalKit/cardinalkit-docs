@@ -1,5 +1,5 @@
 const { defaultTheme } = require('vuepress')
-const { searchPlugin } = require('@vuepress/plugin-search')
+const { docsearchPlugin } = require('@vuepress/plugin-docsearch')
 
 module.exports = {
     theme: defaultTheme({
@@ -41,8 +41,10 @@ module.exports = {
     title: 'CardinalKit Documentation',
     base: '/cardinalkit-docs/',
     plugins: [
-        searchPlugin({
-            // options
+        docsearchPlugin({
+            apiKey: '',
+            indexName: '', 
+            appId: ''
         })
     ]
 }
