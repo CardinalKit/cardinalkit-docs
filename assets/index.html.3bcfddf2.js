@@ -1,0 +1,1 @@
+const a=JSON.parse('{"key":"v-a3bf5fb0","path":"/2-web-dashboard/","title":"CardinalKit Web Dashboard","lang":"en-US","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1655493931000},"filePathRelative":"2-web-dashboard/README.md"}');export{a as data};
