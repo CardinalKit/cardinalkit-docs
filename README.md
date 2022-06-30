@@ -1,4 +1,5 @@
-<img src="https://github.com/CardinalKit/CardinalKit/blob/master/CardinalKit-Web-Assets/header.png?raw=true" />
+![CardinalKit Logo](https://raw.githubusercontent.com/CardinalKit/.github/main/assets/ck-header-light.png#gh-light-mode-only)
+![CardinalKit Logo](https://raw.githubusercontent.com/CardinalKit/.github/main/assets/ck-header-dark.png#gh-dark-mode-only)
 
 # Documentation
 
@@ -38,4 +39,5 @@ From the root folder of the project, run
 ## Built With
 [VuePress](https://vuepress.vuejs.org/)
 
-<img src="https://github.com/CardinalKit/CardinalKit/raw/master/CardinalKit-Web-Assets/footer.png?raw=true" />
+![Stanford Byers Center for Biodesign Logo](https://raw.githubusercontent.com/CardinalKit/.github/main/assets/ck-footer-light.png#gh-light-mode-only)
+![Stanford Byers Center for Biodesign Logo](https://raw.githubusercontent.com/CardinalKit/.github/main/assets/ck-footer-dark.png#gh-dark-mode-only)
