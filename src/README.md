@@ -8,4 +8,4 @@ CardinalKit has been used to build many real-world digital health projects inclu
 
 ## Getting Started
 
-This guide will help you to get your new CardinalKit app up and running. Select the type of app you wish to build from the menu to the left to get started. If you run into trouble, please feel free to raise an issue on Github or reach out to our team via our homepage at [cardinalkit.stanford.edu](https://cardinalkit.stanford.edu).
+This guide will help you to get your new CardinalKit app up and running. Select the type of app you wish to build from the menu to the left to get started. If you run into trouble, please feel free to raise an issue on [our Github](https://github.com/cardinalkit) or reach out to our team via our homepage at [cardinalkit.stanford.edu](https://cardinalkit.stanford.edu).

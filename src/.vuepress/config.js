@@ -3,7 +3,7 @@ const { docsearchPlugin } = require('@vuepress/plugin-docsearch')
 
 module.exports = {
     theme: defaultTheme({
-        repo: 'cardinalkit/cardinalkit',
+        repo: 'cardinalkit',
         contributors: false,
         navbar: [
             {
@@ -20,6 +20,10 @@ module.exports = {
                     '/1-cardinalkit-app/2-setup.md',
                     '/1-cardinalkit-app/3-app-customization.md'
                 ]
+            },
+            {
+                text: 'CardinalKit Android App',
+                link: '/android-app'
             },
             {
                 text: 'CardinalKit Web Dashboard',
