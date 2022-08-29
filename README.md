@@ -32,8 +32,16 @@ npm run build
 
 From the root folder of the project, run
 
+On Mac or Linux:
+
 ```
 ./deploy.sh
+```
+
+On Windows:
+
+```
+.\deploy.bat
 ```
 
 ## Built With
