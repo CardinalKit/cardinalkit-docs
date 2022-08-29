@@ -1,11 +1,11 @@
 ---
 home: false
-title: Create a New CardinalKit App
+title: Create a New CardinalKit iOS App
 footer: Stanford Byers Center for Biodesign
 order: 1
 ---
 
-# Create a New CardinalKit App
+# Create a New CardinalKit iOS App
 
 <img src="./images/doctors.svg" alt="drawing" width="250"/><br />
 

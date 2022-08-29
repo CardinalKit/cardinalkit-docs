@@ -23,13 +23,17 @@ Once, your account is created, log into your Firebase console (top right) and ad
 <img src="./images/firebase-addproject.png" alt="Add a new Firebase Project" width="500" />
 
 <br />
+<br />
 It is important that you disable Google Analytics because it is not BAA compliant and then click "Create". It will take around a minute to set up.
+<br />
 <br />
 
 <img src="./images/google-analytics.png" alt="Disable Google Analytics" width="400"/>
 
 <br />
+<br />
 When your project is ready, click "Continue". 
+<br />
 <br />
 
 <img src="./images/firebase-ready.png" alt="Your project is ready" width="500" />
@@ -95,7 +99,9 @@ There will be a "GoogleService-Info.plist" in the Xcode project as well located 
 <img src="./images/google-plist.png" alt="Link Firebase to App - Step 2" width="800">
 
 <br />
+<br />
 You don't need to continue through the rest of the steps and set up the Firebase SDK and initialization code in your app. This is already done for you in CardinalKit. Go through to step 5 and click on "Continue to Console".
+<br />
 <br />
 
 ## 3. Setting up Email/Password Authentication

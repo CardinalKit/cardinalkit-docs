@@ -25,7 +25,8 @@ module.exports = {
                 text: 'CardinalKit Android App',
                 link: '/android-app',
                 children: [
-                    '/android-app/start.md'
+                    '/android-app/start.md',
+                    '/android-app/setup.md'
                 ]
             },
             {
