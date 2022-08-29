@@ -23,7 +23,10 @@ module.exports = {
             },
             {
                 text: 'CardinalKit Android App',
-                link: '/android-app'
+                link: '/android-app',
+                children: [
+                    '/android-app/start.md'
+                ]
             },
             {
                 text: 'CardinalKit Web Dashboard',
