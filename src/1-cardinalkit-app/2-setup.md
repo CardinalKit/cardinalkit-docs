@@ -221,7 +221,6 @@ Now navigate to the "Storage" tab in your Firebase dashboard. Find the "Rules" s
 rules_version = '2'
 service firebase.storage {
    match /b/{bucket}/o/studies/edu.stanford.cardinalkit {
-   // for iOS app, users can upload and read their own files
       match /users/{userId}/{file} {
          allow read, write: if request.auth.uid == userId;
       }
