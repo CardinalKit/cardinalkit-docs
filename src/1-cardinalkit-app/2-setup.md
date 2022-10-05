@@ -202,8 +202,7 @@ The final step is to allow authorized users to upload data to Firebase.
 
 <img src="./images/10.gif" alt="drawing" width="650"/><br />
  
-Navigate to the Database tab in your Firebase dashboard. Find the "Rules" section and edit the text to match the following rule set:
-
+Navigate to the "Firestore Database" tab in your Firebase dashboard. Find the "Rules" section and edit the text to match the following rule set.
 
 ```
 rules_version = '2';
@@ -213,6 +212,19 @@ service cloud.firestore {
       allow read, write: if request.auth.uid != null;
     }
   }
+}
+```
+
+Now navigate to the "Storage" tab in your Firebase dashboard. Find the "Rules" section there and add the following rules which will allow users to upload files to Cloud Storage (including the signed consent PDF generated during onboarding). You will need to change "edu.stanford.cardinalkit" in line 3 to the bundle identifier of your app.
+
+```
+rules_version = '2'
+service firebase.storage {
+   match /b/{bucket}/o/studies/edu.stanford.cardinalkit {
+   // for iOS app, users can upload and read their own files
+      match /users/{userId}/{file} {
+         allow read, write: if request.auth.uid == userId;
+      }
 }
 ```
 
