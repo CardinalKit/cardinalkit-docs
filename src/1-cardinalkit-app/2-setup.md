@@ -218,7 +218,7 @@ service cloud.firestore {
 Now navigate to the "Storage" tab in your Firebase dashboard. Find the "Rules" section there and add the following rules which will allow users to upload files to Cloud Storage (including the signed consent PDF generated during onboarding). You will need to change "edu.stanford.cardinalkit" in line 3 to the bundle identifier of your app.
 
 ```
-rules_version = '2'
+rules_version = '2';
 service firebase.storage {
    match /b/{bucket}/o/studies/edu.stanford.cardinalkit {
       match /users/{userId}/{file} {
