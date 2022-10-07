@@ -213,10 +213,10 @@ service cloud.firestore {
     }
   }
   match /databases/{database}/documents/studies/{studyId}/carekit-store {
-  	match /{document=**} {
-  		allow read, write: if request.auth.uid != null;
+    match /{document=**} {
+      allow read, write: if request.auth.uid != null;
     }
-  }
+   }
 }
 ```
 
