@@ -7,13 +7,21 @@ order: 1
 
 # Setting Up the Web Dashboard
 
-CardinalKit offers a web dashboard that can be used to visualize mobile health data and survey responses, as well as create and update surveys.
+CardinalKit offers a web dashboard that can be used to visualize mobile health data and survey responses, as well as create and schedule surveys.
 
-*Requirements:* [Node.js](https://nodejs.org/en/) must be installed on your system.
+### Requirements
+
+Before getting started, you will need to have configured a Firebase project and connected your CardinalKit iOS or Android app to it. Please refer to the *Set up Application Infrastructure* section in either the iOS or Android section of this guide if you haven't done this yet, then return to this section to continue setting up the dashboard.
+
+You will need to have Node.js installed on your system. To check if Node.js is installed, open a terminal window and type 'node -v'. If it is installed, the version will be displayed. If not, please visit [nodejs.org](https://nodejs.org) to download and install it. 
+
+You will also need to have the Firebase Command Line Interface (CLI) installed on your system. Installation instructions can be found at [firebase.google.com/docs/cli](https://firebase.google.com/docs/cli). 
+
+Once you have both of these tools installed, you can proceed to the first step below.
 
 ## 1. Configure Your Firebase Project
 
-Before starting this section, you need to have configured a Firebase project and connected your CardinalKit iOS app to it. Please refer to 'Set up Application Infrastructure' if you haven't done this yet, then return to this section. If you have, then proceed to the next step:
+Before starting this section, 
  
  Go to [firebase.google.com](https://firebase.google.com) and sign in with the same account that you set up for the mobile app.
  
