@@ -44,24 +44,30 @@ Before starting this section,
  <br />
  <br />
  Click on the **web app** symbol.
+
  <br />
  <br />
  <img src="./images/webapp.png" alt="drawing" width="450"/>
  <br />
  <br />
-Complete the Firebase form to register a new web app.
+
+Give your dashboard application a name and then click "Register App" to continue.
+
  <br />
  <br />
  <img src="./images/register1.png" alt="drawing" width="438"/>
  <br />
  <br />
-Copy the generated Firebase configuration.
+
+Copy and save the generated Firebase configuration details.
+
  <br />
  <img src="./images/register2.png" alt="drawing" width="650"/>
  <br />
- Open the ***cardinal-kit-web/.env*** file and replace the bolded keys with their values from the configuration you obtained in the last step.
  <br />
- <br />
+
+ Using a text editor, open the ***cardinal-kit-web/.env*** file and replace the bolded keys with their values from the configuration you obtained in the last step.
+
  ```
  VUE_APP_FIREBASE_API_KEY = "**apiKey**"
  VUE_APP_FIREBASE_AUTH_DOMAIN  = "**authDomain**"
@@ -70,35 +76,23 @@ Copy the generated Firebase configuration.
  VUE_APP_FIREBASE_MESSAGING_SENDER_ID  = "**messagingSenderId**"
  VUE_APP_FIREBASE_APP_ID = "**firebaseConfig.appId**"
  ```
- <br />
- <br />
- Now navigate to "Firestore Database" > "Indexes" in your Firebase console. Make sure "Composite" is selected.
- <br />
- <br />
- <img src="./images/create-indexes.png" alt="indexes" width="800">
- <br />
- <br />
- Please add the six indexes that are shown in the image above by clicking "Add Index". It may take a couple of minutes for the indexes to finish building.
 
-## 2. Create an administrator account
+## 2. Create an Administrator account
 
  <br />
 
  To manage your dashboard you need to create an Administrator account. This is created from the Firebase console.
 
- From the [Firebase console](https://console.firebase.google.com), enter the **Authentication** section.
+ From the [Firebase console](https://console.firebase.google.com), click on **Build** on the left sidebar, and then enter the **Authentication** section.
 
  <br />
-
  <img src="./images/authentication.png" alt="drawing" width="550"/>
-
  <br />
  <br />
 
  And then add a new user.
  
  <br />
-
  <img src="./images/newuser.png" alt="drawing" width="850"/>
 
  <br />
@@ -113,13 +107,11 @@ Enter a username and password for the administrator user.
 <br />
 <br />
 
-## 3. Add the admin role
-
 Now you need to indicate to the dashboard that this new user is an **administrator** user. 
 
 User roles are managed in Firestore Database. For users created from the web, this process will be automatic, it is necessary to do it by hand only once for the administrator user.
 
-First copy the **UID** of the user you just created:
+First copy the **UID** of the user you just created. You can do this by hovering over the UID and clicking on the Copy icon. 
 
 <br />
 
@@ -132,22 +124,34 @@ Then click on **Firestore Database**:
 
 <br />
 
-<img src="./images/firestore.png" alt="drawing" />
+<img src="./images/firestore.png" alt="drawing" width="550" />
 
 <br />
 <br />
 
-This is the database of the entire project, here you can see all the records of studies and users generated in the application.
-
-Create a new collection called **users_roles**, add a document with the name being the uid of the previously created administrator user.
-
-Finally add a field to the document called **rol** with value **superAdmin**.
+Click *Start collection* and name the collection **users_roles**.
 
 <br />
 
-<img src="./images/add_role.png" alt="drawing" width="850"/>
+<img src="./images/create-roles-collection.png" alt="" width="550" />
 
-## 4. Update Firebase Security Rules
+<br />
+<br />
+
+Now, within the newly created collection, click *Add document* and paste in the **UID** of the admin user as the name. Then add a field to the document called **rol** with value **superAdmin**.
+
+<br />
+
+<img src="./images/add-role-document.png" alt="" width="550" />
+
+<br />
+<br />
+
+The end result should appear as follows:
+
+<img src="./images/admin-role-finished.png" alt="drawing" width="850"/>
+
+## 3. Update Firebase Security Rules
 
 In order for your administrator user to be able to access the dashboard, you need to update the **Firebase Security Rules**. This is done from the Firebase console. 
 
@@ -211,9 +215,23 @@ service cloud.firestore {
 
 Click **Publish** to save your new rules.
 
+## 4. Create Indexes
+
+Cloud Firestore requires [indexes](https://firebase.google.com/docs/firestore/query-data/indexing) to be created for each query. In this section, we will create custom indexes that our dashboard will use.
+
+Navigate to **Firestore Database**, then click the **Indexes** tab. Make sure **Composite** is selected.
+
+ <br />
+ <br />
+ <img src="./images/create-indexes.png" alt="indexes" width="800">
+ <br />
+ <br />
+
+ Please add the six indexes that are shown in the image above by clicking **Add Index**. It may take a couple of minutes for the indexes to finish building.
+
 ## 5. Test the Dashboard Locally
 
-Once we have configured Firebase, you can test the dashboard locally. You can also deploy it to the cloud using [Firebase Hosting](https://firebase.google.com/docs/hosting) (See step 6 below).
+Now you can test the dashboard locally.
 
 ```bash
  cd cardinal-kit-web
@@ -231,7 +249,7 @@ After having everything installed and configured, we can run the project.
  npm run serve
 ```
 
-## 3. Deploy the Dashboard to Firebase Hosting
+## 6. Deploy the Dashboard to Firebase Hosting
 
 Once we confirm that our dashboard is working properly locally, we can deploy it to Firebase Hosting.
 
