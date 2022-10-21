@@ -229,6 +229,7 @@ service firebase.storage {
       match /users/{userId}/{file} {
          allow read, write: if request.auth.uid == userId;
       }
+   }
 }
 ```
 
