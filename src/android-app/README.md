@@ -5,5 +5,5 @@ This guide will cover how to create a new CardinalKit Android app from our open-
 Go to [Create a New CardinalKit Android App](/cardinalkit-docs/android-app/start.html) to get started.
 
 ::: tip
-CardinalKit Android is currently in beta release and you may encounter issues. Please reach out to us and let us know if you do!
+CardinalKit Android is currently in beta release. Please report any issues you encounter via our [Github issue tracker](https://github.com/CardinalKit/CardinalKit-Android/issues).
 :::
